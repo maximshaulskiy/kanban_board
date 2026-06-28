@@ -1,0 +1,90 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #121212; /* Глубокий темный фон всей страницы */
+}
+
+.login-form {
+    background: #1e1e1e; /* Темно-серая карточка формы, как у колонок доски */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Более мягкая глубокая тень */
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border: 1px solid #2d2d2d; /* Тонкая граница, чтобы форма не сливалась */
+}
+
+.login-form h2 {
+    text-align: center;
+    color: #e0e0e0; /* Светло-серый, комфортный для глаз текст */
+    margin: 0 0 5px 0;
+}
+
+.login-form input {
+    padding: 12px;
+    background-color: #2a2a2a; /* Темный фон для инпутов */
+    border: 1px solid #3d3d3d; /* Граница инпута */
+    border-radius: 5px;
+    font-size: 16px;
+    color: #ffffff; /* Белый текст при вводе */
+    transition: border-color 0.2s;
+}
+
+/* Эффект при клике на инпут */
+.login-form input:focus {
+    outline: none;
+    border-color: #0079bf; /* Твой синий акцент на фокусе */
+}
+
+/* Стилизация плейсхолдеров для темной темы */
+.login-form input::placeholder {
+    color: #757575;
+}
+
+.login-form button {
+    padding: 12px;
+    background-color: #0079bf; /* Твой фирменный синий цвет */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.login-form button:hover {
+    background-color: #0288d1; /* Чуть более яркий синий при наведении */
+}
+
+.login-error {
+    color: #f44336; /* Яркий красный для ошибок на темном фоне */
+    font-size: 14px;
+    text-align: center;
+    white-space: pre-line;
+    background-color: rgba(244, 67, 54, 0.1); /* Легкая подложка под ошибку */
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.auth-footer {
+    margin-top: 15px;
+    font-size: 14px;
+    text-align: center;
+    color: #aaaaaa; /* Приглушенный текст "Нет аккаунта?" */
+}
+
+.auth-footer a {
+    color: #29b6f6; /* Светло-голубая ссылка, отлично читается на темном */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+    color: #4fc3f7;
+}

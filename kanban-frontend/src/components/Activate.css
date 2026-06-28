@@ -1,0 +1,22 @@
+.activate-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh; /* Центрируем по вертикали */
+    text-align: center;
+    padding: 20px;
+}
+
+.activate-status {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background: #f9f9f9;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.activate-status h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
