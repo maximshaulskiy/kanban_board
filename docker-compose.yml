@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   # 1. База данных PostgreSQL
   db:
@@ -7,9 +5,9 @@ services:
     container_name: kanban_db
     restart: always
     environment:
-      POSTGRES_DB: kanban_base
-      POSTGRES_USER: postgres_user
-      POSTGRES_PASSWORD: your_secure_db_password
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     volumes:
       - postgres_data:/var/lib/postgresql/data
     networks:
@@ -28,11 +26,11 @@ services:
       - django_static:/app/static
     environment:
       - DEBUG=False
-      - SECRET_KEY=your_production_secret_key
-      - DATABASE_URL=postgres://postgres_user:your_secure_db_password@db:5432/kanban_base
+      - SECRET_KEY=${SECRET_KEY}
+      - DATABASE_URL=postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}
       # Сюда же пропиши переменные для Gmail SMTP, которые мы настраивали
-      - EMAIL_HOST_USER=твой_логин@gmail.com
-      - EMAIL_HOST_PASSWORD=твой_пароль_приложения
+      - EMAIL_HOST_USER=${EMAIL_HOST_USER}
+      - EMAIL_HOST_PASSWORD=${EMAIL_HOST_PASSWORD}
     depends_on:
       - db
     networks:

@@ -27,7 +27,7 @@ const Login = ({ onLoginSuccess }) => {
 
             onLoginSuccess(access_token, refresh_token)
         } catch(error) {
-            setError("Неверная почта или пароль");
+            setError("Неверная почта или пароль или почта не потверждена");
             console.log(error)
         }
     };

@@ -1,0 +1,6 @@
+Django==6.1.1
+django_environ==0.14.0
+djangorestframework==3.16.1
+python-dotenv==1.2.3
+django-filter
+django-cors-headers
